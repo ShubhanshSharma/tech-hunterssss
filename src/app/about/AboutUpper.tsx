@@ -6,19 +6,19 @@ import gsap from 'gsap'
 
 const AboutUpper = () => {
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    gsap.to('.upperDiv',{
-      y: '-50dvh',
-      scrollTrigger:{
-        trigger: '.upperDiv',
-        start: 'top bottom',
-        end: 'bottom top',
-        markers: false,
-        scrub: true,
-      }
-    })
-  }, [])
+  //   gsap.to('.upperDiv',{
+  //     y: '-50dvh',
+  //     scrollTrigger:{
+  //       trigger: '.upperDiv',
+  //       start: 'top bottom',
+  //       end: 'bottom top',
+  //       markers: false,
+  //       scrub: true,
+  //     }
+  //   })
+  // }, [])
   return (
     <div className=' bg-black relative w-screen h-[50dvh] '>
       <Image alt='' src={img}  className=' lg:h-full w-auto mx-auto'/>

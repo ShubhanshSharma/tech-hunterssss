@@ -15,17 +15,19 @@ const Gallery = () => {
 
   useEffect(() => {
 
-    gsap.to('.upperDiv',{
-      y: '-50dvh',
-      scrollTrigger:{
-        trigger: '.GALLERY',
-        start: 'top top',
-        end: 'bottom top',
-        markers: true,
-        scrub: true,
-        pin: true
-      }
-    })
+    // gsap.fromTo('.upperDiv',{
+    //   marginTop: 0
+    // },{
+    //   marginTop: 0,
+    //   scrollTrigger:{
+    //     trigger: 'GALLERY',
+    //     start: 'top top',
+    //     end: 'bottom top',
+    //     markers: true,
+    //     scrub: true,
+    //     pin: true
+    //   }
+    // })
   }, [])
 
 
@@ -37,22 +39,22 @@ const Gallery = () => {
       </span>
 
       <div className=''>
-        <Marquee img1={img1} img2={img2} direction={'left'}/>
+        <Marquee img1={img1} img2={img2} direction={'left'} img3={undefined} img4={undefined}/>
       </div>
 
       <div className=' mt-[25dvh]'>
-        <Marquee img1={img1} img2={img2}/>
+        <Marquee img1={img1} img2={img2} img3={undefined} img4={undefined} direction={undefined}/>
       </div>
 
       <div className=' mt-[25dvh]'>
-        <Marquee img1={img1} img2={img2} direction='left'/>
+        <Marquee img1={img1} img2={img2} direction='left' img3={undefined} img4={undefined}/>
       </div>
 
 
       {/* about */}
-      <div className=' upperDiv bg-black absolute w-screen h-[50dvh] '>
+      {/* <div className=' upperDiv bg-black absolute w-screen h-[50dvh] '>
         <Image alt='' src={about1}  className=' lg:h-full w-auto mx-auto'/>
-      </div>
+      </div> */}
         
     </div>
   )

@@ -9,7 +9,7 @@ import sampleImage from '../Assets/Home_Image.png';
 
 
 
-export default function Marquee(props){
+export default function Marquee(props: { img1: any; img2: any; img3: any; img4: any; direction: any; }){
 
     let img1 = props.img1;
     let img2 = props.img2;
@@ -30,6 +30,7 @@ export default function Marquee(props){
     
     useEffect(() => {
         requestAnimationFrame(animation);
+        ScrollTrigger.refresh();
 
         gsap.to('.sliderContainer',{
             scrollTrigger:{

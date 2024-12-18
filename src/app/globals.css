@@ -16,8 +16,8 @@ body {
 }
 
 .NAV{
-  border: 2px solid white;
-  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.6);
   mix-blend-mode: difference;
   backdrop-filter: blur(4px);
   transition: box-shadow 0.3s ease;

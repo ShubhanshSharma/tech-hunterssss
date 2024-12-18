@@ -8,19 +8,19 @@ const AboutLower = () => {
 
   useEffect(() => {
 
-    gsap.fromTo('.lowerDiv',{
-        y: '150dvh'
-    },{
-      y: '200dvh',
-      scrollTrigger:{
-        trigger: '.lowerDiv',
-        start: 'top bottom',
-        end: 'bottom top',
-        markers: false,
-        scrub: true,
-        pin: true
-      }
-    })
+    // gsap.fromTo('.lowerDiv',{
+    //     y: '150dvh'
+    // },{
+    //   y: '200dvh',
+    //   scrollTrigger:{
+    //     trigger: '.lowerDiv',
+    //     start: 'top bottom',
+    //     end: 'bottom top',
+    //     markers: false,
+    //     scrub: true,
+    //     pin: true
+    //   }
+    // })
   }, [])
   return (
     <div className=' bg-black relative w-screen h-[50dvh] '>
