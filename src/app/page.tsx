@@ -12,6 +12,7 @@ import CustomCursor from "./Components/CustomCursor";
 // import About from "./about/AboutUpper";
 import Gallery from "./Gallery/Gallery";
 import AboutUpper from "./about/AboutUpper";
+import AboutLower from "./about/AboutLower";
 
 
 export default function App() {
@@ -26,6 +27,7 @@ export default function App() {
       <Home />
 
       <AboutUpper />
+      <AboutLower />
 
       <Gallery />
 

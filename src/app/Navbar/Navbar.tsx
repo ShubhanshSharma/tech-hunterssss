@@ -31,7 +31,8 @@ const Navbar = () => {
     },[])
 
   return (
-    <div className='NAV bg-white rounded-[30px] w-fit px-[70px] h-[50px] fixed bottom-[-50px] items-center flex justify-center gap-[80px]  text-black '
+    <div className='NAV rounded-[30px] w-fit px-[70px] h-[50px] fixed bottom-[-50px] items-center flex justify-center gap-[80px]
+       text-white '
         onMouseEnter={() => setNavbarHover(true)} onMouseLeave={() => setNavbarHover(false)}>
 
         <a href="#HOME">Home</a>

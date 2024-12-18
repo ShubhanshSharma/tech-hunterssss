@@ -1,21 +1,24 @@
 "use client";
 import React, { useEffect } from 'react'
-import img from '../Assets/upperDiv.png'
+import img from '../Assets/lowerDiv.png'
 import Image from 'next/image'
 import gsap from 'gsap'
 
-const AboutUpper = () => {
+const AboutLower = () => {
 
   useEffect(() => {
 
-    gsap.to('.upperDiv',{
-      y: '-50dvh',
+    gsap.fromTo('.lowerDiv',{
+        y: '150dvh'
+    },{
+      y: '200dvh',
       scrollTrigger:{
-        trigger: '.upperDiv',
+        trigger: '.lowerDiv',
         start: 'top bottom',
         end: 'bottom top',
         markers: false,
         scrub: true,
+        pin: true
       }
     })
   }, [])
@@ -26,4 +29,4 @@ const AboutUpper = () => {
   )
 }
 
-export default AboutUpper
+export default AboutLower

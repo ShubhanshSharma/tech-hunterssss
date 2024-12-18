@@ -11,16 +11,20 @@ body {
 }
 
 .toRightHomeAnimationAsset{
-  background: rgb(255,255,255);
+  background: #ffffff;
   background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 22%);
 }
 
 .NAV{
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.4);
+  mix-blend-mode: difference;
+  backdrop-filter: blur(4px);
   transition: box-shadow 0.3s ease;
-  z-index: 999;
+  z-index: 99;
 }
 .NAV:hover{
-  box-shadow: 1px 20px 4px 700px rgba(255, 255, 255, 0.7);
+  /* box-shadow: 1px 20px 4px 700px rgba(255, 255, 255, 0.8); */
   /* box-shadow: 1px 20px 24px 0px rgba(24, 24, 24, 0.7); */
 }
 
