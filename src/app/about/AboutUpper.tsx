@@ -20,7 +20,7 @@ const AboutUpper = () => {
   //   })
   // }, [])
   return (
-    <div className=' bg-black relative w-screen h-[50dvh] '>
+    <div className=' bg-black relative w-screen h-[50dvh] z-10'>
       <Image alt='' src={img}  className=' lg:h-full w-auto mx-auto'/>
     </div>
   )

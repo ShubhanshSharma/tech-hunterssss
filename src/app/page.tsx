@@ -19,19 +19,18 @@ export default function App() {
 
 
   return (
-    <div style={{ overflowX: 'hidden' }} className="CONTAINER text-neutral-200 overflow-x-hidden flex flex-col items-center w-screen min-h-screen px-14 bg-black font-[family-name:var(--font-geist-mono)]">
+    <div style={{ overflowX: 'hidden' }} className="CONTAINER pb-[100dvh] text-neutral-200 overflow-x-hidden flex flex-col items-center w-screen min-h-screen px-14 bg-black font-[family-name:var(--font-geist-mono)]">
       
       <CustomCursor />
       <Navbar />
 
       <Home />
 
-      <AboutUpper />
-      <AboutLower />
+      {/* <AboutUpper />
+      <AboutLower /> */}
 
       <Gallery />
 
-      <div className=" bg-black relative w-screen h-screen"></div>
     
     </div>
   );
