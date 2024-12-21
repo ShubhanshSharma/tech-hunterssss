@@ -33,9 +33,9 @@ export default function Marquee(props: { img1: any; img2: any; img3: any; img4: 
         // ScrollTrigger.refresh();
 
         gsap.fromTo( rightSlider.current,{
-            xPercent:-30
+            xPercent:-40
         },{
-            xPercent: -15,
+            xPercent: -25,
             scrollTrigger:{
                 trigger: rightSlider.current,
                 start: `top bottom`,
@@ -88,18 +88,18 @@ export default function Marquee(props: { img1: any; img2: any; img3: any; img4: 
     // }
 
     return(
-        <div className="sliderContainer relative  left-0 min-w-screen h-fit">
+        <div className="sliderContainer relative mt-[5vh]  left-0 min-w-screen h-fit">
 
             {
                 direction=='left' && 
-                <div ref={rightSlider}  className="slider rightSlider  whitespace-nowrap relative mt-[10vh] w-max text-[#faf9f6] mix-blend-difference flex flex-row">
+                <div ref={rightSlider}  className="slider rightSlider  whitespace-nowrap relative w-max text-[#faf9f6] mix-blend-difference flex flex-row">
                     <div ref={firstText}  className=" flex gap-8 pl-8 m-0 justify-around"><Image src={img1} alt="" className=" h-[160px] rounded-xl w-auto" /><Image src={img2} alt="" className=" h-[160px] rounded-xl w-auto" /><Image src={img1} alt="" className=" h-[160px] rounded-xl w-auto" /><Image src={img2} alt="" className=" h-[160px] rounded-xl w-auto" /><Image src={img1} alt="" className=" h-[160px] rounded-xl w-auto" /><Image src={img2} alt="" className=" h-[160px] rounded-xl w-auto" /></div>
                     {/* <div ref={secondText}  className=" flex gap-8 pl-8 m-0 justify-around"><Image src={img1} alt="" className=" h-[160px] rounded-xl w-auto" /><Image src={img2} alt="" className=" h-[160px] rounded-xl w-auto" /><Image src={img1} alt="" className=" h-[160px] rounded-xl w-auto" /><Image src={img2} alt="" className=" h-[160px] rounded-xl w-auto" /><Image src={img1} alt="" className=" h-[160px] rounded-xl w-auto" /><Image src={img2} alt="" className=" h-[160px] rounded-xl w-auto" /></div> */}
                 </div>
             }
             {
                 direction !=='left' && 
-                <div ref={leftSlider}  className="slider leftSlider whitespace-nowrap relative mt-[10vh] w-max text-[#faf9f6] mix-blend-difference flex flex-row">
+                <div ref={leftSlider}  className="slider leftSlider whitespace-nowrap relative w-max text-[#faf9f6] mix-blend-difference flex flex-row">
                     <div ref={scroll3}  className=" flex gap-8 pl-8 m-0 justify-around"><Image src={img1} alt="" className=" h-[160px] rounded-xl w-auto" /><Image src={img2} alt="" className=" h-[160px] rounded-xl w-auto" /><Image src={img1} alt="" className=" h-[160px] rounded-xl w-auto" /><Image src={img2} alt="" className=" h-[160px] rounded-xl w-auto" /><Image src={img1} alt="" className=" h-[160px] rounded-xl w-auto" /><Image src={img2} alt="" className=" h-[160px] rounded-xl w-auto" /></div>
                     {/* <div ref={scroll4}  className=" flex gap-8 pl-8 m-0 justify-around"><Image src={img1} alt="" className=" h-[160px] rounded-xl w-auto" /><Image src={img2} alt="" className=" h-[160px] rounded-xl w-auto" /><Image src={img1} alt="" className=" h-[160px] rounded-xl w-auto" /><Image src={img2} alt="" className=" h-[160px] rounded-xl w-auto" /><Image src={img1} alt="" className=" h-[160px] rounded-xl w-auto" /><Image src={img2} alt="" className=" h-[160px] rounded-xl w-auto" /></div> */}
                 </div>

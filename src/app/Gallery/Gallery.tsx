@@ -15,51 +15,62 @@ const Gallery = () => {
 
   const GalleryHeading = useRef(null)
   const galleryContainer = useRef(null)
-  const lowerDiv = useRef(null)
+  const lower = useRef(null)
+  const upper = useRef(null)
 
   useEffect(() => {
 
     gsap.fromTo(galleryContainer.current,{
-      marginTop: '-50%'
+      y: '-50vh'
     },{
-      marginTop: '0%',
+      y: '0vh',
       scrollTrigger:{
         trigger: galleryContainer.current,
-        start: 'top 25vh',
-        end: 'bottom 25vh',
+        start: 'top top',
+        end: '+=400',
         markers: false,
-        scrub: true,
+        scrub: 0.01,
       }
     })
 
     const tl = gsap.timeline({
       scrollTrigger:{
-        trigger: lowerDiv.current,
-        start: '300vh center',
-        end: '800vh center',
-        
+        trigger: upper.current,
+        start: 'top top',
+        end: `+=${window.innerHeight/2}`,
         markers: true,
         scrub: true,
+        onLeave: () => {
+          // Hide the element when the scroll ends
+          gsap.set(lower.current, { display: 'none' });
+        },
+        onEnterBack: () => {
+          // Show the element when scrolling back
+          gsap.set(lower.current, { display: 'block' });
+        },
+    
       }
     });
 
-    tl.fromTo(lowerDiv.current,{
-      marginTop: '-100%'
-    },{
-      marginTop: '0%'
+    tl.to(lower.current,{
+      y: '100vh',
+      ease:'none'
     })
-    // tl.to(lowerDiv.current,{
-    //   display: 'none',
-    // })
+
+    
   }, [])
 
 
   return (
     <div id='GALLERY' className="GALLERY text-neutral-900 mb-[50dvh] overflow-x-hidden flex flex-col items-center w-screen min-h-screen px-14 bg-white font-[family-name:var(--font-geist-mono)]">
 
-      <AboutUpper />
+      <div ref={upper} className=''>
+        <AboutUpper />
+      </div>
 
-      <div ref={galleryContainer} className=' flex flex-col items-start w-full h-fit'>
+      
+
+      <div ref={galleryContainer} className=' flex flex-col items-start w-full h-fit pb-10'>
         <span ref={GalleryHeading} className=" self-start lg:text-[90px] font-black lg:mt-4 ">
           Gallery
         </span>
@@ -77,9 +88,10 @@ const Gallery = () => {
         </div>
       </div>
 
-      <div className=' relative' ref={lowerDiv}>
+      <div ref={lower} className=' absolute mt-[50vh]'>
         <AboutLower />
       </div>
+
         
     </div>
   )
