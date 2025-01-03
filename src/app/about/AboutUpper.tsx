@@ -20,8 +20,15 @@ const AboutUpper = () => {
   //   })
   // }, [])
   return (
-    <div className=' bg-black relative w-screen h-[50dvh] z-10'>
-      <Image alt='' src={img}  className=' lg:h-full w-auto mx-auto'/>
+    <div className=' bg-black overflow-y-clip relative flex object-cover px-4 w-screen h-[50vh] z-10'>
+      {/* <Image alt='' src={img}  className=' object-cover h-full w-auto mx-auto'/> */}
+
+      <h2 className=" absolute font-black text-white leading-[60px]  text-[70px] lg:text-[90px] mt-10 md::mt-4 lg:ml-10">
+        ABOUT US
+      </h2>
+      <div className=' relative max-w-[400px] text-white text-justify mx-auto place-self-end'>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur aut sed porro reprehenderit ipsam vel ipsum repellat animi, quisquam obcaecati quaerat, iure earum dicta non, iste pariatur neque laudantium id?
+      </div>
     </div>
   )
 }

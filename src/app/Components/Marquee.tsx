@@ -33,30 +33,33 @@ export default function Marquee(props: { img1: any; img2: any; img3: any; img4: 
         // ScrollTrigger.refresh();
 
         gsap.fromTo( rightSlider.current,{
-            xPercent:-40
+            xPercent:-30
         },{
-            xPercent: -25,
+            xPercent: -5,
+            ease: 'none',
             scrollTrigger:{
                 trigger: rightSlider.current,
-                start: `top bottom`,
-                end: `bottom  -10dvh`,
+                start: `top 50%`,
+                end: 'bottom -50%',
+                // end: `+=${window.innerHeight*1.5}`,
                 markers: false,
-                scrub: 1,
+                scrub: 0.5,
                 // onUpdate: e => direction = e.direction * -1
             },
             // x: '-=300px',
         })
 
         gsap.fromTo( leftSlider.current,{
-            xPercent: 0
+            xPercent: -10
         },{
-            xPercent: -15,
+            xPercent: -35,
+            ease: 'none',
             scrollTrigger:{
                 trigger: leftSlider.current,
-                start: `top bottom`,
-                end: `bottom  top`,
+                start: `top 50%`,
+                end: `bottom -50%`,
                 markers: false,
-                scrub: 1,
+                scrub: 0.5,
                 // onUpdate: e => direction = e.direction * -1
             },
             // x: '-=300px',

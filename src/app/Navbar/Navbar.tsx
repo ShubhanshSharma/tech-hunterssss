@@ -2,6 +2,10 @@
 import gsap from 'gsap'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+
+gsap.registerPlugin(ScrollToPlugin);
+
 
 const Navbar = () => {
 
@@ -30,14 +34,33 @@ const Navbar = () => {
         })
     },[])
 
+    const scrollToSection = (id) => {
+        gsap.to(window, {
+          scrollTo: { y: `#${id}`, offsetY: 50 }, // Scroll to the element with an optional offset
+          duration: 1.4, // Animation duration
+          delay: 0.2,
+          ease: 'power2.inOut', // Smooth easing
+        });
+    };
+
+    const scrollToGallery = () => {
+        gsap.to(window, {
+          scrollTo: { y: '#GALLERY', offsetY: -window.innerHeight/2 }, // Scroll to the element with an optional offset
+          duration: 1.4, // Animation duration
+          delay: 0.2,
+          ease: 'power2.inOut', // Smooth easing
+        });
+    };
+      
+
   return (
-    <div className='NAV rounded-[30px] w-fit px-[70px] h-[50px] fixed bottom-[-50px] items-center flex justify-center gap-[80px]
-       text-white '
+    <div className='NAV uppercase invisible sm:visible rounded-[30px] w-fit px-[70px] h-[50px] fixed bottom-[-50px] items-center flex justify-center gap-[80px]
+       text-black '
         onMouseEnter={() => setNavbarHover(true)} onMouseLeave={() => setNavbarHover(false)}>
 
-        <a href="#HOME">Home</a>
-        <a href="#ABOUT">About</a>
-        <a href="#GALLERY">Gallery</a>
+        <a onClick={() => scrollToSection('HOME')}>Home</a>
+        <a onClick={() => scrollToSection('GALLERY')}>About</a>
+        <a onClick={() => scrollToGallery()}>Gallery</a>
         <a href="#CONTACT">Contact</a>
         
     </div>

@@ -16,8 +16,8 @@ export default function Home() {
   useEffect(() => {
 
     //image reveal animation
-    gsap.to(leftRect.current, { x: '-50vw', duration: 1.5, delay: 0, ease: 'expo.inOut' });
-    gsap.to(rightRect.current, { x: '50vw', duration: 1.5, delay: 0, ease: 'expo.inOut' });
+    gsap.to(leftRect.current, { x: '-50vw', duration: 1.5, delay: 0, ease: 'expo.inOut', onComplete: () => {gsap.set(leftRect.current, {display: 'none'})} });
+    gsap.to(rightRect.current, { x: '50vw', duration: 1.5, delay: 0, ease: 'expo.inOut', onComplete: () => {gsap.set(rightRect.current, {display: 'none'})} });
     // gsap.to(leftRect.current, { scale: 0, duration: 0, delay: 2.5,});
     // gsap.to(rightRect.current, { scale: 0 , duration: 0, delay: 2.5,});
 
@@ -40,24 +40,24 @@ export default function Home() {
   },[])
 
   return (
-    <div style={{ overflowX: 'hidden' }} className="HOME CONTAINER text-neutral-200 overflow-x-hidden flex flex-col items-center w-screen min-h-screen px-14 bg-black font-[family-name:var(--font-geist-mono)]">
+    <div id="HOME" style={{ overflowX: 'hidden' }} className="HOME CONTAINER text-neutral-200 overflow-x-clip flex flex-col items-center w-screen min-h-screen px-4 md:px-14 bg-black font-[family-name:var(--font-geist-mono)]">
       
-      <div ref={homeImageRef} className=" w-full mt-[1em] rounded-[60px] lg:h-[400px] object-fill overflow-hidden">
-        <Image  src={homeImage} alt="homeImage" className=" w-full mt-[1em] rounded-[60px]"/>
+      <div ref={homeImageRef} className=" w-full mt-[2em] px-2 mb-2 rounded-[24px] md:rounded-[60px] h-[55vh] lg:h-[400px] object-fill overflow-hidden">
+        <Image  src={homeImage} alt="homeImage" className=" object-cover h-full md:w-full md:rounded-[60px]"/>
       </div>
       <div ref={leftRect} className=" absolute left-0 top-0 w-1/2 h-screen bg-black "></div>
       <div ref={rightRect} className=" absolute right-0 top-0 w-1/2 h-screen bg-black "></div>
 
-      <button ref={LandingButton} className=" lg:mt-8 text-black bg-neutral-200 rounded-full self-start px-10 py-3 font-light text-sm">
+      <button ref={LandingButton} className=" uppercase py-1 px-3 mt-14  lg:mt-4 text-black bg-neutral-200 md:rounded-full self-start md:px-10 md:py-3 font-light text-sm">
         Join techhunterssss community 
       </button>
 
       {/* TechHunterss heading */}
-      <span ref={huntersHeading} className=" self-start lg:text-[90px] font-black lg:-mt-4 ">
-        techhunterssss
+      <span ref={huntersHeading} className=" orbitron uppercase leading-[50px] md:leading-[70px] self-start text-wrap max-w-[90vw] text-[50px] lg:text-[60px] xl:text-[70px] font-black mt-10 lg:mt-4 ">
+        Tech-hunterssss
       </span>
       
-      <div className=" absolute min-w-fit min-h-max lg:right-[80px] lg:top-[440px]">
+      <div className=" absolute min-w-fit min-h-max invisible md:visible right-0 top-[80vh] md:right-[30px] md:top-[480px] bottom-10 md:scale-75 xl:scale-100 xl:right-[80px] xl:top-[64vh]">
         <HomeAssetAnmation />
       </div>
     </div>
