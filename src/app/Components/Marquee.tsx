@@ -108,12 +108,6 @@ export default function Marquee(props: { img1: any; img2: any; img3: any; img4: 
                 </div>
             }
             
-
-
-            {/* <div  className="slider mt-[15vh] whitespace-nowrap relative w-max text-[#faf9f6] mix-blend-difference flex flex-row">
-                <div ref={scroll5}  className=" flex gap-8 pl-8 m-0 justify-around"><Image src={sampleImage} alt="" className=" h-[100px] rounded-xl w-auto" /><Image src={sampleImage} alt="" className=" h-[100px] rounded-xl w-auto" /><Image src={sampleImage} alt="" className=" h-[100px] rounded-xl w-auto" /><Image src={sampleImage} alt="" className=" h-[100px] rounded-xl w-auto" /><Image src={sampleImage} alt="" className=" h-[100px] rounded-xl w-auto" /></div>
-                <div ref={scroll6}  className=" flex gap-8 pl-8 m-0 justify-around"><Image src={sampleImage} alt="" className=" h-[100px] rounded-xl w-auto" /><Image src={sampleImage} alt="" className=" h-[100px] rounded-xl w-auto" /><Image src={sampleImage} alt="" className=" h-[100px] rounded-xl w-auto" /><Image src={sampleImage} alt="" className=" h-[100px] rounded-xl w-auto" /><Image src={sampleImage} alt="" className=" h-[100px] rounded-xl w-auto" /></div>
-            </div> */}
             
         </div>
     )

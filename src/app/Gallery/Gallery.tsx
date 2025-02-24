@@ -20,29 +20,15 @@ const Gallery = () => {
 
   useEffect(() => {
 
-    gsap.fromTo(galleryContainer.current,{
-      y: '-50vh'
-    },{
-      y: '0vh',
-      scrollTrigger:{
-        trigger: galleryContainer.current,
-        start: 'top top',
-        end: '+=400',
-        markers: false,
-        scrub: 0.01,
-        onEnter: () => {
-          gsap.set('.GALLERY', {backgroundColor: 'white'})
-        }
-      }
-    })
-
     const tl = gsap.timeline({
       scrollTrigger:{
         trigger: upper.current,
         start: 'top top',
-        end: `+=${window.innerHeight/2}`,
+        end: 'bottom top',
         markers: false,
         scrub: true,
+        pin: galleryContainer.current,
+        pinSpacing: true,
         onLeave: () => {
           // Hide the element when the scroll ends
           gsap.set(lower.current, { display: 'none' });
@@ -65,17 +51,17 @@ const Gallery = () => {
 
 
   return (
-    <div id='GALLERY' className="GALLERY orbitron text-neutral-900 mb-[50dvh] overflow-x-hidden flex flex-col items-center w-screen min-h-screen px-14 bg-black font-[family-name:var(--font-geist-mono)]">
+    <div id='GALLERY' className="GALLERY text-neutral-900 pb-[50dvh] overflow-x-hidden flex flex-col items-center w-screen min-h-screen py-10 px-14 bg-black">
 
-      <div ref={upper} className=''>
+      <div ref={upper} className='absolute'>
         <AboutUpper />
       </div>
 
       
 
       <div ref={galleryContainer} className=' flex flex-col justify-evenly items-start w-full min-h-screen md:pb-10'>
-        <span ref={GalleryHeading} className=" self-center md:self-start uppercase text-[60px] lg:text-[90px] font-black lg:mt-4 ">
-          Gallery
+        <span ref={GalleryHeading} className=" self-center text-white md:self-start uppercase text-[60px] lg:text-[90px] font-black lg:mt-4 ">
+          Ga<span className=' lowercase'>ll</span>ery
         </span>
 
         <div className=''>

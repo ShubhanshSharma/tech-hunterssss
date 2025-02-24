@@ -21,6 +21,10 @@ const HomeAssetAnmation = () => {
             ease: "power4.out",
             delay: 2.8,
         })
+        gsap.to('.toRightHomeAnimationAsset',{
+            display: 'none',
+            delay: 5,
+        })
     },[])
   return (
     <div className='toRightHomeAnimation relative uppercase w-[300px] overflow-hidden rounded-xl'>
