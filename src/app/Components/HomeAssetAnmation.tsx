@@ -30,7 +30,7 @@ const HomeAssetAnmation = () => {
   return (
     <div className='toRightHomeAnimation relative uppercase w-[300px] overflow-hidden rounded-xl'>
         <Image src={animationImage} alt=""  className=' shadow-md'/>
-        <div className='toRightHomeAnimationAsset h-full w-[130%] absolute right-0 top-0 bg-black z-10'></div>
+        <div className='toRightHomeAnimationAsset h-full w-[130%] absolute right-0 top-0 z-10'></div>
 
         <p className=' absolute bottom-2 left-[40%] text-[32px] font-thin text-black'>2K+</p>
         <p className=' absolute w-[30%] font-normal right-0 bottom-4 text-[12px] text-black'>Members & community Parteners</p>

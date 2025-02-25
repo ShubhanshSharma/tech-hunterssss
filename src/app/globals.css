@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('node_modules/locomotive-scroll/dist/locomotive-scroll.css');
 
 
 @tailwind base;
@@ -61,7 +62,8 @@ body {
 	url("data:image/svg+xml,%3Csvg viewBox='0 0 871 871' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.76' numOctaves='6' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
-.HOME, .GALLERY, .TEAM, .ABOUTLOWER, .ABOUTUPPER ,.CONTACT, .PASTEVENTS{
+.HOME, .GALLERY, .TEAM, .ABOUTLOWER, .ABOUTUPPER ,.CONTACT, .PASTEVENTS, .toRightHomeAnimationAsset{
+  background-color: black;
   font-family: 'Poppins';
   background: radial-gradient(circle at 53% 54%, rgba(0,0,0,0.9), rgba(0,0,0,0.87)),
 	url("data:image/svg+xml,%3Csvg viewBox='0 0 871 871' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.76' numOctaves='6' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
@@ -88,7 +90,7 @@ body {
   border: 1px solid white;
   background-color: rgb(255, 255, 255);
   mix-blend-mode: difference;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(38px);
   transition: box-shadow 0.3s ease;
   font-family: 'Poppins';
   z-index: 99;

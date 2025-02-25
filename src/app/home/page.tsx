@@ -34,7 +34,7 @@ export default function Home() {
   },[])
 
   return (
-    <div id="HOME" style={{ overflowX: 'hidden' }} className="HOME CONTAINER text-neutral-200 overflow-x-clip flex flex-col items-center w-screen min-h-screen pb-[30vh] px-4 md:px-14 bg-black">
+    <div id="HOME" style={{ overflowX: 'hidden' }} className="HOME CONTAINER text-neutral-200 overflow-x-clip flex flex-col items-center w-screen min-h-screen pb-[10vh] px-4 md:px-14 bg-black">
       
       <div ref={homeImageRef} className=" homeImage w-screen mb-2  object-fill overflow-hidden">
         <Image  src={homeImage} priority={true} alt="homeImage" className=" object-cover w-full "/>
@@ -47,9 +47,9 @@ export default function Home() {
       </button>
 
       {/* TechHunterss heading */}
-      <span ref={huntersHeading} className=" uppercase leading-[50px] md:leading-[70px] self-start text-wrap max-w-[90vw] text-[50px] lg:text-[60px] xl:text-[70px] font-black mt-10 lg:mt-4 ">
+      <span data-scroll data-scroll-speed="0.5" ref={huntersHeading} className=" uppercase leading-[50px] md:leading-[70px] self-start text-wrap max-w-[90vw] text-[50px] lg:text-[60px] xl:text-[70px] font-black mt-10 lg:mt-4 ">
         Tech~hunterssss
-        <span className="absolute toRightHomeAnimationAsset h-full w-full left-0 bg-black z-20"></span>
+        <span className="absolute toRightHomeAnimationAsset h-full w-full left-0  z-20"></span>
       </span>
       
       <div className=" absolute min-w-fit min-h-max invisible md:visible right-0 top-[80vh] md:right-[30px] md:top-[480px] bottom-10 md:scale-75 xl:scale-100 xl:right-[80px] xl:top-[76vh]">

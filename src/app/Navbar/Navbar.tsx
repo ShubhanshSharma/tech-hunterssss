@@ -88,7 +88,7 @@ const NavbarClient = () => {
         gsap.to(window, {
             scrollTo: { y: '#GALLERY', offsetY: -window.innerHeight/2 - 40 },
             duration: 1.4,
-            delay: 1.2,
+            delay: .2,
             ease: 'power2.inOut',
         });
     };
@@ -127,17 +127,17 @@ const NavbarClient = () => {
 
     return (
         <div 
-            className={`NAV uppercase sm:visible font-light w-fit px-[90px] h-[50px] fixed bottom-[-65px] 
+            className={`NAV rounded-md sm:visible font-light w-fit px-[90px] h-[50px] fixed bottom-[-65px] 
                 items-center flex justify-center gap-[80px] text-black ${gsapLoaded ? 'opacity-100' : 'opacity-0'}`}
             onMouseEnter={() => setNavbarHover(true)} 
             onMouseLeave={() => setNavbarHover(false)}
         >
-            <button onClick={() => scrollToSection('HOME')} className="cursor-pointer">Home</button>
-            <button onClick={() => scrollToSection('GALLERY')} className="cursor-pointer">About</button>
-            <button onClick={() => scrollToGallery()} className="cursor-pointer">Gallery</button>
-            <button onClick={() => scrollToSection('TEAM')} className="cursor-pointer">TEAM</button>
+            <button onClick={() => scrollToSection('HOME')} className="cursor-pointer">HOME</button>
+            <button onClick={() => scrollToSection('GALLERY')} className="cursor-pointer">ABOUT</button>
+            <button onClick={() => scrollToGallery()} className="cursor-pointer">GLIMPSE</button>
             <button onClick={() => directTo('Track')}>PAST EVENTS</button>
-            <button onClick={() => scrollToSection('CONTACT')}>Contact</button>
+            <button onClick={() => scrollToSection('TEAM')} className="cursor-pointer">TEAM</button>
+            <button onClick={() => scrollToSection('CONTACT')}>CONTACT</button>
         </div>
     );
 };

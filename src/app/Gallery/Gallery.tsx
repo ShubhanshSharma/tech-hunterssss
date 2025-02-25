@@ -2,6 +2,12 @@
 import React, { useEffect, useRef } from 'react'
 import img1 from '../Assets/Home_Image.png'
 import img2 from '../Assets/asset_home_1.png'
+import img3 from '../Assets/20230827_105526.jpg'
+import img4 from '../Assets/20230827_111950.jpg'
+import img5 from '../Assets/20230827_135431.jpg'
+import img6 from '../Assets/20230827_152759.jpg'
+import img7 from '../Assets/20240223_150303.jpg'
+import img8 from '../Assets/20240223_152844.jpg'
 import about1 from '../Assets/upperDiv.png'
 import Marquee from '../Components/Marquee';
 import Image from 'next/image';
@@ -51,7 +57,7 @@ const Gallery = () => {
 
 
   return (
-    <div id='GALLERY' className="GALLERY text-neutral-900 pb-[50dvh] overflow-x-hidden flex flex-col items-center w-screen min-h-screen py-10 px-14 bg-black">
+    <div id='GALLERY' className="GALLERY text-neutral-900 pb-[10vh] overflow-x-hidden flex flex-col items-center w-screen min-h-screen py-10 px-14 bg-black">
 
       <div ref={upper} className='absolute'>
         <AboutUpper />
@@ -61,19 +67,19 @@ const Gallery = () => {
 
       <div ref={galleryContainer} className=' flex flex-col justify-evenly items-start w-full min-h-screen md:pb-10'>
         <span ref={GalleryHeading} className=" self-center text-white md:self-start uppercase text-[60px] lg:text-[90px] font-black lg:mt-4 ">
-          Ga<span className=' lowercase'>ll</span>ery
+          GLIMPSE
         </span>
 
         <div className=''>
-          <Marquee img1={img1} img2={img2} direction={'left'} img3={undefined} img4={undefined}/>
+          <Marquee img1={img1} img2={img7} direction={'left'} img3={img3} img4={img4}/>
         </div>
 
         <div className=''>
-          <Marquee img1={img1} img2={img2} img3={undefined} img4={undefined} direction={undefined}/>
+          <Marquee img1={img5} img2={img6} img3={img7} img4={img8} direction={undefined}/>
         </div>
 
         <div className=' '>
-          <Marquee img1={img1} img2={img2} direction='left' img3={undefined} img4={undefined}/>
+          <Marquee img1={img1} img2={img3} direction='left' img3={img7} img4={img6}/>
         </div>
       </div>
 
