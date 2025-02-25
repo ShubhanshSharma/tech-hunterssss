@@ -9,8 +9,15 @@ const NavbarClient = () => {
     const [NavbarHover, setNavbarHover] = useState(false);
     const [gsapLoaded, setGsapLoaded] = useState(false);
     const [gsap, setGsap] = useState<any>(null);
+    //for client side rendering
+    const [isClient, setIsClient] = useState(false);
     const router = useRouter();
     const pathname = usePathname();
+
+      
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
 
     // Load GSAP and ScrollToPlugin only on client side
     useEffect(() => {
@@ -101,15 +108,21 @@ const NavbarClient = () => {
     
         tl.to('.CONTAINER', {
             opacity: 0,
-            x: '100vw',
+            scale: 0.5,
             duration: 1,
             ease: 'power3.inOut',
-        })
-        .to('.NAV', {
-            opacity: 0,
-            duration: 0.5,
-            ease: 'power2.in'
-        }, '>-0.5'); // Start slightly before the previous animation ends
+        });
+        // .to('.NAV', {
+        //     opacity: 0,
+        //     duration: 0.5,
+        //     ease: 'power2.in'
+        // }, '>-0.5'); // Start slightly before the previous animation ends
+    }
+
+    if(!isClient){
+        return(
+            <div>Loading....</div>
+        )
     }
 
     return (
@@ -119,12 +132,12 @@ const NavbarClient = () => {
             onMouseEnter={() => setNavbarHover(true)} 
             onMouseLeave={() => setNavbarHover(false)}
         >
-            <a onClick={() => scrollToSection('HOME')} className="cursor-pointer">Home</a>
-            <a onClick={() => scrollToSection('GALLERY')} className="cursor-pointer">About</a>
-            <a onClick={() => scrollToGallery()} className="cursor-pointer">Gallery</a>
-            <a onClick={() => scrollToSection('TEAM')} className="cursor-pointer">TEAM</a>
+            <button onClick={() => scrollToSection('HOME')} className="cursor-pointer">Home</button>
+            <button onClick={() => scrollToSection('GALLERY')} className="cursor-pointer">About</button>
+            <button onClick={() => scrollToGallery()} className="cursor-pointer">Gallery</button>
+            <button onClick={() => scrollToSection('TEAM')} className="cursor-pointer">TEAM</button>
             <button onClick={() => directTo('Track')}>PAST EVENTS</button>
-            <a href="#CONTACT">Contact</a>
+            <button onClick={() => scrollToSection('CONTACT')}>Contact</button>
         </div>
     );
 };

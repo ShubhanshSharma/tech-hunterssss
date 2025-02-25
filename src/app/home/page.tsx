@@ -37,7 +37,7 @@ export default function Home() {
     <div id="HOME" style={{ overflowX: 'hidden' }} className="HOME CONTAINER text-neutral-200 overflow-x-clip flex flex-col items-center w-screen min-h-screen pb-[30vh] px-4 md:px-14 bg-black">
       
       <div ref={homeImageRef} className=" homeImage w-screen mb-2  object-fill overflow-hidden">
-        <Image  src={homeImage} alt="homeImage" className=" object-cover w-full "/>
+        <Image  src={homeImage} priority={true} alt="homeImage" className=" object-cover w-full "/>
       </div>
       <div ref={leftRect} className=" absolute left-0 top-0 w-1/2 h-screen bg-black "></div>
       <div ref={rightRect} className=" absolute right-0 top-0 w-1/2 h-screen bg-black "></div>

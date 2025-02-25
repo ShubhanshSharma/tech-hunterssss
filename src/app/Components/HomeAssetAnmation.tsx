@@ -1,3 +1,4 @@
+"use client";
 import Image from 'next/image'
 import React, { useEffect } from 'react'
 import animationImage from '../Assets/asset_home_1.png'

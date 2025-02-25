@@ -8,8 +8,16 @@ gsap.registerPlugin(ScrollToPlugin);
 
 
 const NavMobile = () => {
-
     const [NavbarOpen, setNavbarOpen] = useState(false);
+
+    //for client side rendering
+    const [isClient, setIsClient] = useState(false);
+  
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
+    
+
 
 
     useEffect(() => {
@@ -26,7 +34,7 @@ const NavMobile = () => {
         })
     },[])
 
-    const scrollToSection = (id) => {
+    const scrollToSection = (id: any) => {
         gsap.to(window, {
           scrollTo: { y: `#${id}`, offsetY: 50 }, // Scroll to the element with an optional offset
           duration: 1.4, // Animation duration
@@ -128,6 +136,12 @@ const NavMobile = () => {
             })
         }
     },[NavbarOpen])
+
+
+    
+    if (!isClient) {
+        return <div>Loading...</div>; // or a skeleton/placeholder
+    }
       
 
   return (

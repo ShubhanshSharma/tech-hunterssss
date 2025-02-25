@@ -66,30 +66,6 @@ export default function Marquee(props: { img1: any; img2: any; img3: any; img4: 
         })
     },[]);
 
-    // const animation = () => {
-    //     if(xPercent <= -100){
-    //         xPercent = 0;
-    //     }
-    //     if(xPercent >0){
-    //         xPercent = -100;
-    //     }
-    //     if(xPercent2 <= -100){
-    //         xPercent2 = 0;
-    //     }
-    //     if(xPercent2 >0){
-    //         xPercent2 = -100;
-    //     }
-    //     gsap.set(firstText.current,{xPercent: xPercent });
-    //     gsap.set(secondText.current,{xPercent: xPercent });
-    //     gsap.set(scroll3.current,{xPercent: xPercent2 });
-    //     gsap.set(scroll4.current,{xPercent: xPercent2 });
-    //     // gsap.set(scroll5.current,{xPercent: xPercent });
-    //     // gsap.set(scroll6.current,{xPercent: xPercent });
-    //     xPercent += 0.07 *direction;
-    //     xPercent2 -= 0.07 *direction;
-    //     requestAnimationFrame(animation);
-    // }
-
     return(
         <div className="sliderContainer relative mt-[5vh]  left-0 min-w-screen h-fit">
 
