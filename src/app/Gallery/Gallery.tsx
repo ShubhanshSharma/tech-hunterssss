@@ -84,7 +84,7 @@ const Gallery = () => {
         </span>
 
         <div className=''>
-          <Marquee img1={img11} img2={img7} direction={'left'} img3={img10} img4={img5}/>
+          <Marquee img1={img1} img2={img7} direction={'left'} img3={img3} img4={img4}/>
         </div>
 
         <div className=''>

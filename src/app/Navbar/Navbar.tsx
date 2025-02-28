@@ -57,7 +57,7 @@ const NavbarClient = () => {
             y: -70,
             scale: 1,
             duration: 0.6,
-            delay: 2,
+            delay: 3.2,
             ease: 'power2.out'
         });
     }, [gsapLoaded, gsap]);

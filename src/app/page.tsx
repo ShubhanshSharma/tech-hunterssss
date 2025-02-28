@@ -22,7 +22,7 @@ export default function App() {
     // Initialize Lenis
     const lenis = new Lenis({
       autoRaf: true,
-      duration: 1.6,
+      duration: 1.2,
       easing: (x) => 1 - Math.pow(1 - x, 4),
     });
 

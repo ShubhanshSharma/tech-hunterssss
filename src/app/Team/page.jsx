@@ -18,10 +18,10 @@ export default function Team() {
             ease: 'power4.inOut',
             scrollTrigger:{
               trigger: '.teamHeading',
-              start: 'top 75%',
-              end: 'bottom 75%',
+              start: 'top 85%',
+              // end: 'bottom 70%',
               toggleActions: 'play none none reverse',
-              markers: false,
+              markers: true,
               scrub: false,
               
             }
