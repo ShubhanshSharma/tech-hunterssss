@@ -21,7 +21,7 @@ export default function Team() {
               start: 'top 85%',
               // end: 'bottom 70%',
               toggleActions: 'play none none reverse',
-              markers: true,
+              markers: false,
               scrub: false,
               
             }

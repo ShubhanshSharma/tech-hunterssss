@@ -45,13 +45,13 @@ export default function Home() {
       .fromTo(huntersHeading.current,
         {y: 50, opacity: 0},
         {y: 0, opacity: 1, duration: 1.5, ease: 'power4.out'},
-        0) // Start after image starts scaling
+        0.4) // Start after image starts scaling
         
       // Button animation  
       .fromTo(LandingButton.current,
         {yPercent: 50, opacity: 0},
         {yPercent: 0, opacity: 1, duration: 1.5, ease: 'power4.out'},
-        2); // Start after heading animation starts
+        2.4); // Start after heading animation starts
 
       }
   }, [isLoaded]);
@@ -59,7 +59,7 @@ export default function Home() {
   return (
     <div 
       id="HOME" 
-      className="HOME overflow-x-hidden text-neutral-200 flex flex-col justify-center items-center w-screen min-h-screen pb-[6vh] px-4 md:px-14 bg-black"
+      className="HOME overflow-x-hidden text-neutral-200 flex flex-col justify-center items-center w-screen min-h-screen pb-[0vh] px-4 md:px-14 bg-black"
     >
       <div ref={homeImageRef} className="absolute homeImage overflow-hidden">
         <Image 
@@ -71,7 +71,7 @@ export default function Home() {
           // quality={85} // Reduce quality slightly for faster loading
           placeholder="blur" // Add a blur placeholder
           // blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-          className="w-[100vw] h-[80vh] object-cover"
+          className="w-full h-[80vh] object-cover"
           onLoadingComplete={() => setIsLoaded(true)}
         />
       </div>
@@ -88,8 +88,6 @@ export default function Home() {
 
       {/* TechHunterss heading */}
       <span 
-        data-scroll 
-        data-scroll-speed="0.5" 
         ref={huntersHeading} 
         className="uppercase leading-[50px] md:leading-[70px] text-wrap max-w-[90vw] text-[50px] lg:text-[60px] xl:text-[70px] font-black mt-10 lg:mt-4"
       >
@@ -98,7 +96,7 @@ export default function Home() {
 
       <button 
         ref={LandingButton} 
-        className="uppercase py-1 px-3 mt-14 lg:mt-4 text-black bg-neutral-200 rounded-md md:px-10 md:py-3 font-light text-sm"
+        className="uppercase py-1 px-3 mt-14  text-black bg-neutral-200 rounded-sm md:rounded-md md:px-14 md:py-3 font-light text-lg"
       >
         Join US 
       </button>
