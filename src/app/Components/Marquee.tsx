@@ -71,7 +71,7 @@ export default function Marquee(props: { img1: any; img2: any; img3: any; img4: 
 
             {
                 direction == 'left' && 
-                <div ref={rightSlider} className="slider h-[50vh] rightSlider whitespace-nowrap relative w-max text-[#faf9f6] mix-blend-difference flex flex-row">
+                <div ref={rightSlider} className="slider h-[40vh] md:h-[60vh] rightSlider whitespace-nowrap relative w-max text-[#faf9f6] mix-blend-difference flex flex-row">
                     <div ref={firstText} className="flex gap-2 pl-8 m-0 justify-around">
                         <Image loading="lazy" src={img1} alt="" width={0} height={0} sizes="100vh" style={{ height: '100%', width: 'auto' }} className="h-full rounded-sm w-auto object-contain" />
                         <Image loading="lazy" src={img2} alt="" width={0} height={0} sizes="100vh" style={{ height: '100%', width: 'auto' }} className="h-full rounded-sm w-auto object-contain" />
@@ -86,7 +86,7 @@ export default function Marquee(props: { img1: any; img2: any; img3: any; img4: 
             }
             {
                 direction !== 'left' && 
-                <div ref={leftSlider} className="slider h-[50vh] leftSlider whitespace-nowrap relative w-max text-[#faf9f6] mix-blend-difference flex flex-row">
+                <div ref={leftSlider} className="slider h-[40vh] md:h-[60vh] leftSlider whitespace-nowrap relative w-max text-[#faf9f6] mix-blend-difference flex flex-row">
                     <div ref={scroll3} className="flex gap-2 pl-8 m-0 justify-around">
                         <Image loading="lazy" src={img1} alt="" width={0} height={0} sizes="100vh" style={{ height: '100%', width: 'auto' }} className="h-full rounded-sm w-auto object-contain" />
                         <Image loading="lazy" src={img2} alt="" width={0} height={0} sizes="100vh" style={{ height: '100%', width: 'auto' }} className="h-full rounded-sm w-auto object-contain" />

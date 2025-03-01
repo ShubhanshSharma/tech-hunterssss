@@ -23,7 +23,7 @@ const AboutUpper = () => {
         trigger: '.aboutUsHeading',
         start: 'top 65%',
         end: 'bottom 65%',
-        // toggleActions: 'play none none reverse',
+        toggleActions: 'play none none reverse',
         markers: false,
         scrub: false,
         
@@ -33,14 +33,14 @@ const AboutUpper = () => {
     
   }, [])
   return (
-    <div className='ABOUTUPPER bg-black overflow-y-clip relative flex flex-col justify-between items-center object-cover pb-[30px] px-4 w-screen h-[50vh] z-10'>
+    <div className='ABOUTUPPER bg-black overflow-y-clip relative flex flex-col justify-around items-center object-cover px-4 w-screen h-[50vh] z-10'>
       {/* <Image alt='' src={img}  className=' object-cover h-full w-auto mx-auto'/> */}
 
-      <h2 className=" aboutUsHeading relative mx-auto font-black text-white leading-[60px]  lg:text-[70px]">
+      <h2 className=" aboutUsHeading relative mx-auto font-black text-white leading-[60px] text-[60px] lg:text-[70px]">
         ABOUT US
       </h2>
       <div className=' aboutUsUpperContent relative max-w-[400px] text-slate-400 text-justify mx-auto place-self-end'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur aut sed porro reprehenderit ipsam vel ipsum repellat animi, quisquam obcaecati quaerat, iure earum dicta non, iste pariatur neque laudantium id?
+        We aim to bring together all the community-minded hunters to provide them with the perfect space where they can nurture their tech curiosities by learning, networking, interacting, and sharing their experiences-all while having fun!
       </div>
     </div>
   )

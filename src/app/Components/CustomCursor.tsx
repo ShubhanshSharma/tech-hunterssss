@@ -6,13 +6,13 @@ export default function CustomCursor() {
   return (
     <div className="App">
     <AnimatedCursor
-    trailingSpeed={1}
-      innerSize={12}
-      outerSize={30}
+    trailingSpeed={1.5}
+      innerSize={5}
+      outerSize={20}
       color='255, 255, 255'
       outerAlpha={1}
-      innerScale={4}
-      outerScale={2}
+      innerScale={1}
+      outerScale={7}
       outerStyle={{
         mixBlendMode: 'exclusion'
       }}   

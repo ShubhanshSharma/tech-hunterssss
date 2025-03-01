@@ -3,9 +3,11 @@ import dynamic from 'next/dynamic'
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';  
 import React, { useEffect, useState } from 'react'
+import Image from 'next/image';
+import logo from '../Assets/HuntersLogo-removebg-preview.png';
 
 // Create a component that only renders on client side
-const NavbarClient = () => {
+export default function Navbar() {
     const [NavbarHover, setNavbarHover] = useState(false);
     const [gsapLoaded, setGsapLoaded] = useState(false);
     const [gsap, setGsap] = useState<any>(null);
@@ -34,31 +36,27 @@ const NavbarClient = () => {
     }, []);
 
     // Handle hover animation after GSAP is loaded
-    useEffect(() => {
-        if (!gsapLoaded || !gsap) return;
+    // useEffect(() => {
+    //     if (!gsapLoaded || !gsap) return;
 
-        gsap.to('.NAV', {
-            y: NavbarHover ? -80 : -70,
-            duration: 0.1,
-            ease: 'power1'
-        });
-    }, [NavbarHover, gsapLoaded, gsap]);
+    //     gsap.to('.NAV', {
+    //         y: NavbarHover ? -80 : -70,
+    //         duration: 0.1,
+    //         ease: 'power1'
+    //     });
+    // }, [NavbarHover, gsapLoaded, gsap]);
 
     // Initial animation after GSAP is loaded
     useEffect(() => {
         if (!gsapLoaded || !gsap) return;
 
-        gsap.to('.NAV', {
-            y: 0,
-            scale: 0.5
-        });
-
-        gsap.to('.NAV', {
+        gsap.fromTo('.NAV',{
+            y:0,
+        }, {
             y: -70,
-            scale: 1,
             duration: 0.6,
             delay: 3.2,
-            ease: 'power2.out'
+            ease: 'power3.out'
         });
     }, [gsapLoaded, gsap]);
 
@@ -127,24 +125,29 @@ const NavbarClient = () => {
 
     return (
         <div 
-            className={`NAV rounded-md sm:visible font-light w-fit px-[90px] h-[50px] fixed bottom-[-65px] 
-                items-center flex justify-center gap-[80px] text-black ${gsapLoaded ? 'opacity-100' : 'opacity-0'}`}
+            className={`NAV md:visible font-light w-screen h-[70px] fixed bottom-[-75px] 
+                items-center flex justify-center gap-[80px] ${gsapLoaded ? 'opacity-100' : 'opacity-0'}`}
             onMouseEnter={() => setNavbarHover(true)} 
             onMouseLeave={() => setNavbarHover(false)}
-        >
+            >
+            <Image src={logo} alt="Hunters-Logo" className="w-[60px]  fixed left-4 object-cover" />
             <button onClick={() => scrollToSection('HOME')} className="cursor-pointer">HOME</button>
             <button onClick={() => scrollToSection('GALLERY')} className="cursor-pointer">ABOUT</button>
             <button onClick={() => scrollToGallery()} className="cursor-pointer">GLIMPSE</button>
-            <button onClick={() => directTo('Track')}>PAST EVENTS</button>
-            <button onClick={() => scrollToSection('TEAM')} className="cursor-pointer">TEAM</button>
+            {/* <button onClick={() => directTo('Track')}>PAST EVENTS</button> */}
+            <Link href="/Track"> PAST EVENTS</Link>
+            <Link href="/#SPONSORS">SPONSORS</Link>
+            <Link href="/Team">TEAM</Link>
+
+            {/* <button onClick={() => scrollToSection('TEAM')} className="cursor-pointer">TEAM</button> */}
             <button onClick={() => scrollToSection('CONTACT')}>CONTACT</button>
         </div>
     );
 };
 
 // Create the main Navbar component that dynamically loads the client component
-const Navbar = dynamic(() => Promise.resolve(NavbarClient), {
-    ssr: false
-});
+// const Navbar = dynamic(() => Promise.resolve(NavbarClient), {
+//     ssr: false
+// });
 
-export default Navbar;
+// export default Navbar;

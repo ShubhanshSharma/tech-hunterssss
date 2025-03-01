@@ -1,6 +1,12 @@
+
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "./Navbar/Navbar";
+import CustomCursor from "./Components/CustomCursor";
+import NavMobile from "./Navbar/NavMobile";
+import Lenis from "lenis";
+import LenisProvider from "./Components/LenisProvider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,11 +29,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <LenisProvider />
+        <Navbar />
+        <NavMobile />
+        <CustomCursor />
         {children}
       </body>
     </html>

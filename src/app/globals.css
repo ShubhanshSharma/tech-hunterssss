@@ -42,7 +42,11 @@ body {
 
 
 .homeImage{
-  filter: brightness(0.4) contrast(1.2);
+  filter: brightness(0.5) contrast(1.1);
+}
+
+.homeHeading{
+  text-shadow: 0 0px 12px rgb(255, 255, 255, 0.3);
 }
 
 
@@ -62,7 +66,7 @@ body {
 	url("data:image/svg+xml,%3Csvg viewBox='0 0 871 871' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.76' numOctaves='6' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
-.HOME, .GALLERY, .TEAM, .ABOUTLOWER, .ABOUTUPPER ,.CONTACT, .PASTEVENTS, .leftRect, .rightRect{
+.HOME, .GALLERY, .TEAM, .ABOUTLOWER, .ABOUTUPPER, .SPONSORS ,.CONTACT, .PASTEVENTS, .leftRect, .rightRect{
   /* background-color: black; */
   font-family: 'Poppins';
   background: radial-gradient(circle at 53% 54%, rgba(0,0,0,0.9), rgba(0,0,0,0.87)),
@@ -87,10 +91,11 @@ body {
 }
 
 .NAV{
-  border: 1px solid white;
-  background-color: rgb(255, 255, 255);
-  mix-blend-mode: difference;
-  backdrop-filter: blur(38px);
+  border-top: 1px solid rgb(143, 143, 143);
+  /* background-color: rgba(0, 0, 0, 0.427); */
+  /* mix-blend-mode: difference; */
+  color: white;
+  backdrop-filter: blur(20px);
   transition: box-shadow 0.3s ease;
   font-family: 'Poppins';
   z-index: 99;
@@ -99,9 +104,101 @@ body {
 .NAVMOB{
   font-family: 'Poppins';
   border: 1px solid white;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.322);
   mix-blend-mode: difference;
   backdrop-filter: blur(4px);
   transition: box-shadow 0.3s ease;
   z-index: 99;
+}
+
+
+
+/* Scroll Down Home Animation */
+
+.scroll-down-animation
+{
+    position: relative;
+}
+.scroll-down-animation span:nth-child(2)
+{
+    animation-delay: -0.2s;
+}
+.scroll-down-animation span:nth-child(3)
+{
+    animation-delay: -0.4s;
+}
+.scroll-down-animation span
+{
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 3s infinite;
+}
+@keyframes animate
+{
+    0%
+  {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px,-20px);
+    }
+    50%
+  {
+        opacity: 1;
+    }
+    100%
+  {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px,20px);
+    }
+}
+
+
+
+
+/* scroll down animation 2 */
+.mouse{
+	width: 40px;
+	height: 60px;
+	border-radius: 20px;
+  border: 3px solid #a7a7a7; /* Replace $c with a valid color value */
+  position: relative;
+  scale: 0.4;
+}
+.mouse::before, .mouse::after {
+    content: '';
+    display: block;
+    position: absolute;
+    display: block;
+    position: absolute;
+}
+.m-2::before {
+    width: 3px;
+    height: 34px;
+    border-radius: 2px;
+    top: 10px;
+    left: calc(50% - 2px);
+    background: #a7a7a7; /* Define a valid color value */
+    animation: m-2-ball 3.2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+	
+@keyframes m-2-ball {
+  0%, 50%, 60% {
+    transform: scaleY(0.118);
+  }
+  30% {
+    transform: scaleY(1);
+  }
+  0%, 29.99% {
+    transform-origin: top;
+  }
+  30%, 100% {
+    transform-origin: bottom;
+  }
+  90%, 100% {
+    transform: scaleY(0.118) translateY(-255px);
+  }
 }

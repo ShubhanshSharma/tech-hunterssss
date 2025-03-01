@@ -84,15 +84,15 @@ const Gallery = () => {
         </span>
 
         <div className=''>
-          <Marquee img1={img1} img2={img7} direction={'left'} img3={img3} img4={img4}/>
+          <Marquee img1={img5} img2={img7} direction={'left'} img3={img3} img4={img8}/>
         </div>
 
         <div className=''>
-          <Marquee img1={img9} img2={img6} img3={img4} img4={img3} direction={undefined}/>
+          <Marquee img1={img9} img2={img6} img3={img5} img4={img10} direction={undefined}/>
         </div>
 
         <div className=' '>
-          <Marquee img1={img11} img2={img3} direction='left' img3={img6} img4={img8}/>
+          <Marquee img1={img6} img2={img4} direction='left' img3={img11} img4={img8}/>
         </div>
       </div>
 

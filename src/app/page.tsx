@@ -10,6 +10,7 @@ import Team from "./Team/page";
 import Link from "next/link";
 import LocomotiveScroll from "locomotive-scroll";
 import Lenis from "lenis";
+import Sponsors from "./Sponsors/page";
 
 export default function App() {
 
@@ -20,11 +21,11 @@ export default function App() {
 
 
     // Initialize Lenis
-    const lenis = new Lenis({
-      autoRaf: true,
-      duration: 1.2,
-      easing: (x) => 1 - Math.pow(1 - x, 4),
-    });
+    // const lenis = new Lenis({
+    //   autoRaf: true,
+    //   duration: 1.2,
+    //   easing: (x) => 1 - Math.pow(1 - x, 4),
+    // });
 
   }, []);
 
@@ -35,15 +36,13 @@ export default function App() {
   return (
     <div className="CONTAINER pb-[100dvh] text-neutral-200 flex flex-col items-center w-[100vw] min-h-screen h-max overflow-x-clip px-14 bg-black ">
       
-      {isMounted && <CustomCursor />}
-      <Navbar />
-      <NavMobile />
 
       <Home />
 
       <Gallery />
 
-      <Team />
+      <Sponsors />
+
       
       
     </div>
