@@ -78,7 +78,7 @@ const Gallery = () => {
 
       
 
-      <div ref={galleryContainer} className=' flex flex-col justify-evenly items-start w-full min-h-screen md:pb-10'>
+      <div ref={galleryContainer} className=' flex flex-col justify-evenly items-start w-screen overflow-x-hidden min-h-screen md:pb-10'>
         <span ref={GalleryHeading} className=" self-center text-white md:self-start uppercase text-[60px] lg:text-[90px] font-black lg:mt-4 ">
           GLIMPSE
         </span>

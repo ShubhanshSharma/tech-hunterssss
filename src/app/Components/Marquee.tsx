@@ -67,7 +67,7 @@ export default function Marquee(props: { img1: any; img2: any; img3: any; img4: 
     },[]);
 
     return(
-        <div className="sliderContainer relative mt-[10px]  left-0 min-w-screen h-fit">
+        <div className="sliderContainer relative mt-[10px]  left-0 w-screen h-fit">
 
             {
                 direction == 'left' && 

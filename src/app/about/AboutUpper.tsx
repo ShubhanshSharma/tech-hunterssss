@@ -17,8 +17,9 @@ const AboutUpper = () => {
     },{
       y: '0px',
       opacity: 1,
-      duration: 1.2,
+      duration: 0.6,
       ease: 'power2.inOut',
+      stagger: 0.4,
       scrollTrigger:{
         trigger: '.aboutUsHeading',
         start: 'top 65%',
@@ -33,13 +34,13 @@ const AboutUpper = () => {
     
   }, [])
   return (
-    <div className='ABOUTUPPER bg-black overflow-y-clip relative flex flex-col justify-around items-center object-cover px-4 w-screen h-[50vh] z-10'>
+    <div className='ABOUTUPPER bg-black overflow-y-clip relative flex flex-col justify-end gap-[150px] md:gap-[100px]  items-center object-cover px-4 w-screen h-[50vh] z-10'>
       {/* <Image alt='' src={img}  className=' object-cover h-full w-auto mx-auto'/> */}
 
-      <h2 className=" aboutUsHeading relative mx-auto font-black text-white leading-[60px] text-[60px] lg:text-[70px]">
+      <h2 className=" aboutUsHeading relative mx-auto font-black text-white leading-[60px] text-[60px] lg:text-[90px]">
         ABOUT US
       </h2>
-      <div className=' aboutUsUpperContent relative max-w-[400px] text-slate-400 text-justify mx-auto place-self-end'>
+      <div className=' aboutUsUpperContent relative max-w-[400px] text-slate-400 text-justify mx-auto mb-[40px] place-self-end'>
         We aim to bring together all the community-minded hunters to provide them with the perfect space where they can nurture their tech curiosities by learning, networking, interacting, and sharing their experiences-all while having fun!
       </div>
     </div>

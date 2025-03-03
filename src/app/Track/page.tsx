@@ -19,16 +19,19 @@ export default function PastEvents() {
     useEffect(() => {
         gsap.set('.virtualEventsReveal', {
             opacity: 0,
-            scale: 0.5, 
+            y: 100,
+            // scale: 0.5, 
         });
     
         // Animate in
         gsap.fromTo('.virtualEventsReveal',{
             opacity: 0,
-            scale: 0.5,
+            y: 100,
+            // scale: 0.5,
         }, {
             opacity: 1,
-            scale: 1,
+            y: 0,
+            // scale: 1,
             duration: 1,
             delay: 0.4,
             ease: 'power3.out',
