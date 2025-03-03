@@ -37,7 +37,7 @@ export default function Contact(){
 
             {/* Links */}
             <div className=" absolute w-[300px] md:ml-[51px]  lg:right-[00px] z-10 top-[340px] md:top-[300px] text-left flex flex-col font-extralight gap-4">
-                <a href='https://www.linkedin.com/in/shubhansh-sharma-308062263' target="_blank" 
+                <a href='https://www.linkedin.com/in/' target="_blank" 
                     className=" group relative w-fit flex gap-2 items-baseline flex-row h-fit overflow-clip"
                     >
                     <svg className=" group-hover:rotate-[40deg] duration-500 relative" width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -49,7 +49,7 @@ export default function Contact(){
                     <span>Linkedin</span>
                 </a>
 
-                <a href="https://github.com/ShubhanshSharma" target="_blank" 
+                <a href="https://github.com" target="_blank" 
                         className=" group relative w-fit flex gap-2 items-baseline flex-row h-fit overflow-clip">
 
                     <svg className=" group-hover:rotate-[40deg] duration-500 relative" width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
