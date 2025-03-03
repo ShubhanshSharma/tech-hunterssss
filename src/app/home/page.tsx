@@ -45,15 +45,15 @@ export default function Home() {
       .fromTo(huntersHeading.current,
         {y: 50, opacity: 0},
         {y: 0, opacity: 1, duration: 1.5, ease: 'power4.out'},
-        0.4); // Start after image starts scaling
+        0.4) // Start after image starts scaling
         
       // Button animation  
-      gsap.fromTo(LandingButton.current,
+      .fromTo(LandingButton.current,
         {yPercent: 50, opacity: 0},
         {yPercent: 0, opacity: 1, duration: 1.5, ease: 'power4.out'},
         2.4) // Start after heading animation starts
 
-        gsap.fromTo('.scroll-down-animation',
+        .fromTo('.scroll-down-animation',
           {yPercent: 50, opacity: 0},
           {yPercent: 20, opacity: 1, duration: 1.5, ease: 'power4.out'},
           3.4); // Start after heading animation starts
