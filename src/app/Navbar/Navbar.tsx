@@ -17,12 +17,6 @@ export default function Navbar() {
     const [isClient, setIsClient] = useState(false);
     const router = useRouter();
     const pathname = usePathname();
-    // const gallery = document.getElementById('GALLERY');
-    // const home = document.getElementById('HOME');
-    // const team = document.getElementById('TEAM');
-    // const about = document.getElementById('ABOUT');
-    // const contact = document.getElementById('CONTACT');
-    // const sponsors = document.getElementById('SPONSORS');
 
 
       
@@ -127,13 +121,14 @@ export default function Navbar() {
                 <button onClick={() => scrollToSection('HOME')} className="cursor-pointer">HOME</button>
                 <button onClick={() => scrollToSection('GALLERY')} className="cursor-pointer">ABOUT</button>
                 <button onClick={() => scrollToGallery()} className="cursor-pointer">GLIMPSE</button>
-                {/* <button onClick={() => directTo('Track')}>PAST EVENTS</button> */}
                 <Link href="/Track"> PAST EVENTS</Link>
                 <button onClick={() => scrollToSection("SPONSORS")} >SPONSORS</button>
                 <button onClick={() => scrollToSection('TEAM')} >TEAM</button>
 
-                {/* <button onClick={() => scrollToSection('TEAM')} className="cursor-pointer">TEAM</button> */}
-                <button onClick={() => scrollToSection('CONTACT')}>CONTACT</button>
+                <button onClick={() => {
+                    if (!lenis.current) return;
+                        lenis.current?.scrollTo(document.body.scrollHeight, { duration: 1.2, easing: (x) => 1 - Math.pow(1 - x, 4) });
+                }}>CONTACT</button>
             </div>
             ) : null
     );

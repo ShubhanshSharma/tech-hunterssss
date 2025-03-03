@@ -8,6 +8,8 @@ export default function LenisProvider() {
     const lenis = new Lenis({
       autoRaf: true,
       duration: 1.2,
+      syncTouch: true,
+      touchInertiaMultiplier: 5,
       easing: (x) => 1 - Math.pow(1 - x, 4),
     });
 

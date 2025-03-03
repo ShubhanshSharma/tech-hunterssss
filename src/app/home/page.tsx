@@ -45,17 +45,17 @@ export default function Home() {
       .fromTo(huntersHeading.current,
         {y: 50, opacity: 0},
         {y: 0, opacity: 1, duration: 1.5, ease: 'power4.out'},
-        0.4) // Start after image starts scaling
+        0.4); // Start after image starts scaling
         
       // Button animation  
-      .fromTo(LandingButton.current,
+      gsap.fromTo(LandingButton.current,
         {yPercent: 50, opacity: 0},
         {yPercent: 0, opacity: 1, duration: 1.5, ease: 'power4.out'},
         2.4) // Start after heading animation starts
 
-        .fromTo('.scroll-down-animation',
+        gsap.fromTo('.scroll-down-animation',
           {yPercent: 50, opacity: 0},
-          {yPercent: 0, opacity: 1, duration: 1.5, ease: 'power4.out'},
+          {yPercent: 20, opacity: 1, duration: 1.5, ease: 'power4.out'},
           3.4); // Start after heading animation starts
 
       }
@@ -94,18 +94,18 @@ export default function Home() {
       {/* TechHunterss heading */}
       <span 
         ref={huntersHeading} 
-        className="uppercase homeHeading leading-[50px]  md:leading-[70px]  max-w-[90vw] text-[30px] sm:text-[60px] md:text-[80px] lg:text-[100px] font-black mt-[62vh] lg:mt-14"
+        className="uppercase z-50 homeHeading leading-[50px]  md:leading-[70px]  max-w-[90vw] text-[30px] sm:text-[60px] md:text-[80px] lg:text-[100px] font-black mt-[62vh] lg:mt-14"
       >
         Tech~hunterssss
       </span>
       
-      <p className="homePara relative mx-auto text-justify block text-[12px] md:hidden  mt-10 px-[50px]  max-w-[400px] font-bold text-gray-500">
+      <p className="homePara relative mx-auto text-justify block text-[12px] md:hidden  mt-6 px-[50px]  max-w-[400px] font-bold text-gray-500">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ad fugit dicta. Ex numq
       </p>
 
       <button 
         ref={LandingButton} 
-        className="uppercase py-1 px-3 mt-14 opacity-0  text-slate-50 bg-white bg-opacity-30 backdrop-blur-md border-white border rounded-sm md:rounded-[4px] md:px-10 md:py-3 font-light"
+        className="uppercase py-1 px-3 mt-8 md:mt-14 opacity-0  text-slate-50 bg-white bg-opacity-30 backdrop-blur-md border-white border rounded-sm md:rounded-[4px] md:px-10 md:py-3 font-light"
       >
         Join US 
       </button>
@@ -116,7 +116,7 @@ export default function Home() {
         <span></span>
         <span></span>
       </div> */}
-      <div className="mouse m-2 translate-y-28 scroll-down-animation opacity-0 "></div>
+      <div className="mouse m-2 -translate-y-8 md:translate-y-28 scroll-down-animation opacity-0 "></div>
 
 
       {/* Lazy load the asset animation when needed */}

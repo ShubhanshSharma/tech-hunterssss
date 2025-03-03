@@ -34,10 +34,12 @@ body {
   font-family: 'Poppins';
   /* font-family: Arial, Helvetica, sans-serif; */
   width: 100vw;
-  height: max-content;
+  min-height: 100vh;
   overflow-x: hidden;
   background-color: black;
+  position: relative;
 }
+
 body::before{
   content: '';
   width: 100%;
@@ -56,9 +58,13 @@ body::before{
   font-family: 'Poppins';
 }
 
-
-.homeImage{
-  filter: brightness(0.5) contrast(1.1);
+.homeImage {
+  filter: brightness(0.8) contrast(1.1);
+}
+@media (min-width: 768px) {
+  .homeImage {
+    filter: brightness(0.5) contrast(1.1);
+  }
 }
 
 .homeHeading{
@@ -68,12 +74,9 @@ body::before{
 
 
 .HOME, .GALLERY, .TEAM, .ABOUTLOWER, .ABOUTUPPER, .SPONSORS ,.CONTACT, .PASTEVENTS, .leftRect, .rightRect{
-  /* background-color: black; */
+
   font-family: 'Poppins';
   z-index: 10;
-  /* background: radial-gradient(circle at 53% 54%, rgba(0,0,0,0.9), rgba(0,0,0,0.87)),
-	url("data:image/svg+xml,%3Csvg viewBox='0 0 871 871' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.76' numOctaves='6' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"); */
-
 }
 
 .ABOUTLOWER , .ABOUTUPPER, .leftRect, .rightRect{
@@ -112,7 +115,6 @@ body::before{
   transition: box-shadow 0.3s ease;
   z-index: 999;
 }
-
 
 
 /* Scroll Down Home Animation */

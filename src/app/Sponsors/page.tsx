@@ -46,7 +46,7 @@ export default function Sponsors() {
             opacity: 1,
             duration: 0.6,
             ease: 'power4.out',
-            stagger: 0.4,
+            stagger: 0.1,
             scrollTrigger:{
               trigger: '.sponsorImage',
               start: 'top 85%',

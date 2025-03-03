@@ -7,6 +7,7 @@ import CustomCursor from "./Components/CustomCursor";
 import NavMobile from "./Navbar/NavMobile";
 import Lenis from "lenis";
 import LenisProvider from "./Components/LenisProvider";
+import Contact from "./Contact/page";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -40,7 +41,9 @@ export default function RootLayout({
         <Navbar />
         <NavMobile />
         <CustomCursor />
+        
         {children}
+        <Contact />
       </body>
     </html>
   );

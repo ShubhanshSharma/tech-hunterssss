@@ -11,6 +11,7 @@ import Link from "next/link";
 import LocomotiveScroll from "locomotive-scroll";
 import Lenis from "lenis";
 import Sponsors from "./Sponsors/page";
+import Contact from "./Contact/page";
 
 export default function App() {
 
@@ -27,7 +28,7 @@ export default function App() {
 
 
   return (
-    <div className="CONTAINER pb-[100dvh] text-neutral-200 flex flex-col items-center w-[100vw] h-max overflow-x-hidden px-14 bg-black ">
+    <div className="CONTAINER  text-neutral-200 flex flex-col items-center w-[100vw] h-max overflow-x-hidden px-14 bg-black ">
       
 
       <Home />
@@ -36,7 +37,6 @@ export default function App() {
 
       <Sponsors />
 
-      
       
     </div>
   );

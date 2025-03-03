@@ -30,6 +30,7 @@ const Gallery = () => {
   const img9 = 'https://i.imgur.com/aKmlzow.jpeg'
   const img10 = 'https://i.imgur.com/josEEDz.jpeg'
   const img11 = 'https://i.imgur.com/NS7G6nO.jpeg'
+  const img12 = 'https://i.imgur.com/vBtuXfF.jpeg'
 
 
   const GalleryHeading = useRef(null)
@@ -84,15 +85,15 @@ const Gallery = () => {
         </span>
 
         <div className=''>
-          <Marquee img1={img5} img2={img7} direction={'left'} img3={img3} img4={img8}/>
+          <Marquee img1={img7} img2={img3} direction={'left'} img3={img5} img4={img8}/>
         </div>
 
         <div className=''>
-          <Marquee img1={img9} img2={img6} img3={img5} img4={img10} direction={undefined}/>
+          <Marquee img1={img12} img2={img10} img3={img9} img4={img6} direction={undefined}/>
         </div>
 
         <div className=' '>
-          <Marquee img1={img6} img2={img4} direction='left' img3={img11} img4={img8}/>
+          <Marquee img1={img6} img2={img4} direction='left' img3={img8} img4={img11}/>
         </div>
       </div>
 
