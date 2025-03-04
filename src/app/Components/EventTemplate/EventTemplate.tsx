@@ -11,7 +11,7 @@ interface EventTemplateProps {
 
 const EventTemplate: React.FC<EventTemplateProps> = ({ title, date, location, children }) => {
   return (
-    <div className=" px-6 max-w-[700px] flex flex-col items-center my-16">
+    <div className="  max-w-[700px] flex flex-col items-center my-16">
 
         <h2 className=" eventHeading relative mx-auto font-semibold underline underline-offset-8 text-white text-[34px] lg:text-[50px]">
             {title}
