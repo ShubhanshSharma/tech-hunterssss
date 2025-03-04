@@ -10,6 +10,7 @@ export default function LenisProvider() {
       duration: 1.2,
       syncTouch: true,
       touchMultiplier: 1.5,
+      syncTouchLerp: 0.15,
       easing: (x) => 1 - Math.pow(1 - x, 4),
     });
 
