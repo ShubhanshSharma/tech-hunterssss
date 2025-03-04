@@ -30,9 +30,8 @@ export default function Sponsors() {
             scrollTrigger:{
               trigger: '.sponsorsHeading',
               start: 'top 85%',
-              // end: 'bottom 70%',
-              // toggleActions: 'play none none reverse',
-              // markers: true,
+              toggleActions: 'play none none reverse',
+              markers: true,
               
             }
           })
@@ -49,9 +48,8 @@ export default function Sponsors() {
             scrollTrigger:{
               trigger: '.sponsorsHeading',
               start: 'top 60%',
-              // end: 'bottom 70%',
-              toggleActions: 'play none none reset',
-              markers: true,
+              // toggleActions: 'play none none reset',
+              // markers: true,
               
             }
           })
@@ -59,7 +57,7 @@ export default function Sponsors() {
 
   return (
     <div id='SPONSORS' className="SPONSORS w-screen min-h-screen h-max flex flex-col items-center py-[70px] px-4 md:px-14">
-      <h2 className=" sponsorsHeading relative mx-auto font-black text-white leading-[60px] text-[60px]  lg:text-[90px]">
+      <h2 className=" sponsorsHeading relative mx-auto font-black text-white text-[60px]  lg:text-[90px]">
         SPONSORS
       </h2>
 
