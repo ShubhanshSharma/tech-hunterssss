@@ -100,12 +100,14 @@ export default function Home() {
         " together, we hold the power <br/>to build the world we envision "
       </pre>
 
-      <button 
+      <a 
+        href="https://chat.whatsapp.com/L2H2Ykk1qtLLy9y8jxsZjl"
         ref={LandingButton} 
+        target="_blank"
         className="uppercase py-2 px-6 mt-14  opacity-0 text-[12px] sm:text-[16px] text-slate-50 bg-white bg-opacity-30 backdrop-blur-md border-white border rounded-lg md:rounded-[14px]  font-light"
       >
         Join US 
-      </button>
+      </a>
 
       {/* Scroll down animation */}
       {/* <div className="scroll-down-animation opacity-0 translate-y-24">

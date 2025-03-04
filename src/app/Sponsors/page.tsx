@@ -26,14 +26,13 @@ export default function Sponsors() {
             y: 0,
             opacity: 1,
             duration: 1.2,
-            ease: 'power4.inOut',
+            ease: 'power4.out',
             scrollTrigger:{
               trigger: '.sponsorsHeading',
               start: 'top 85%',
               // end: 'bottom 70%',
-            //   toggleActions: 'play none none reverse',
-              markers: false,
-              scrub: false,
+              // toggleActions: 'play none none reverse',
+              // markers: true,
               
             }
           })
@@ -48,12 +47,11 @@ export default function Sponsors() {
             ease: 'power4.out',
             stagger: 0.1,
             scrollTrigger:{
-              trigger: '.SPONSORS',
-              start: 'top 65%',
+              trigger: '.sponsorsHeading',
+              start: 'top 60%',
               // end: 'bottom 70%',
-            //   toggleActions: 'play none none reset',
-              markers: false,
-              scrub: false,
+              toggleActions: 'play none none reset',
+              markers: true,
               
             }
           })
