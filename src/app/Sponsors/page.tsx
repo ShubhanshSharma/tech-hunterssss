@@ -30,8 +30,8 @@ export default function Sponsors() {
             scrollTrigger:{
               trigger: '.sponsorsHeading',
               start: 'top 85%',
-              toggleActions: 'play none none reverse',
-              markers: true,
+              // toggleActions: 'play none none reverse',
+              // markers: true,
               
             }
           })
