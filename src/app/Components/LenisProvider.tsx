@@ -9,7 +9,7 @@ export default function LenisProvider() {
       autoRaf: true,
       duration: 1.2,
       syncTouch: false,
-      touchInertiaMultiplier: 40,
+      touchInertiaMultiplier: 3,
       easing: (x) => 1 - Math.pow(1 - x, 4),
     });
 
