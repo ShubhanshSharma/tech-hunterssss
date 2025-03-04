@@ -21,9 +21,9 @@ export default function Sponsors() {
     useEffect(() => {
         gsap.fromTo('.sponsorsHeading' ,{
             opacity: 0,
-            y: '100px'
+            y: 100
           },{
-            y: '0px',
+            y: 0,
             opacity: 1,
             duration: 1.2,
             ease: 'power4.inOut',
@@ -40,16 +40,16 @@ export default function Sponsors() {
 
           gsap.fromTo('.sponsorImage' ,{
             opacity: 0,
-            y: '100px'
+            y: 100
           },{
-            y: '0px',
+            y: 0,
             opacity: 1,
             duration: 0.6,
             ease: 'power4.out',
             stagger: 0.1,
             scrollTrigger:{
-              trigger: '.sponsorImage',
-              start: 'top 85%',
+              trigger: '.SPONSORS',
+              start: 'top 65%',
               // end: 'bottom 70%',
             //   toggleActions: 'play none none reset',
               markers: false,

@@ -121,7 +121,8 @@ export default function Navbar() {
                 <button onClick={() => scrollToSection('HOME')} className="cursor-pointer">HOME</button>
                 <button onClick={() => scrollToSection('GALLERY')} className="cursor-pointer">ABOUT</button>
                 <button onClick={() => scrollToGallery()} className="cursor-pointer">GLIMPSE</button>
-                <Link href="/Track"> PAST EVENTS</Link>
+                <button onClick={() => scrollToSection('PASTEVENTS')} className="cursor-pointer">PAST EVENTS</button>
+                {/* <Link href="/Track"> PAST EVENTS</Link> */}
                 <button onClick={() => scrollToSection("SPONSORS")} >SPONSORS</button>
                 <button onClick={() => scrollToSection('TEAM')} >TEAM</button>
 

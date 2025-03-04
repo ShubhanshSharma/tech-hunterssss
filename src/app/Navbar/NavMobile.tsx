@@ -211,7 +211,8 @@ const NavMobile = () => {
                     if (!lenis.current) return;
                         lenis.current?.scrollTo(document.body.scrollHeight, { duration: 1.2, easing: (x) => 1 - Math.pow(1 - x, 4) });
                 }}>CONTACT</button>
-        <Link href="/Track" className='NAVMOB-pastEvents absolute w-max'> PAST EVENTS</Link>
+        <button onClick={() => scrollToSection('PASTEVENTS')} className="NAVMOB-pastEvents absolute w-max">PAST EVENTS</button>
+        {/* <Link href="/Track" className='NAVMOB-pastEvents absolute w-max'> PAST EVENTS</Link> */}
         <button onClick={() => scrollToSection("TEAM")} className='NAVMOB-team absolute'>TEAM</button>
     </div>
   )

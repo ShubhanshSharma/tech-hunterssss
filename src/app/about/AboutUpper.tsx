@@ -40,7 +40,7 @@ const AboutUpper = () => {
       <h2 className=" aboutUsHeading relative mx-auto font-black text-white leading-[60px] text-[60px] lg:text-[90px]">
         ABOUT US
       </h2>
-      <div className=' aboutUsUpperContent relative max-w-[400px] text-slate-400 text-justify mx-auto mb-[40px] place-self-end'>
+      <div className=' aboutUsUpperContent relative max-w-[600px] text-[16px] sm:text-[22px] font-medium text-gray-500 text-justify mx-auto mb-[40px] place-self-end'>
         We aim to bring together all the community-minded hunters to provide them with the perfect space where they can nurture their tech curiosities by learning, networking, interacting, and sharing their experiences-all while having fun!
       </div>
     </div>

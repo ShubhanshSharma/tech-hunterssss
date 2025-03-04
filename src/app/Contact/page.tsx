@@ -1,7 +1,7 @@
 'use client';
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { FaLinkedin, FaLocationDot, FaXTwitter } from "react-icons/fa6";
+import { FaDiscord, FaLinkedin, FaLocationDot, FaXTwitter } from "react-icons/fa6";
 
 import logo from '../Assets/HuntersLogo-removebg-preview.png'
 import { FaGithubSquare, FaInstagramSquare } from "react-icons/fa";
@@ -14,7 +14,7 @@ export default function Contact(){
 
     return(
         <>
-        <div id="CONTACT" className="CONTACT w-screen h-[100vh] px-4 overflow-x-clip  relative text-white bg-[#0f0f0f] ">
+        <div id="CONTACT" className="CONTACT w-screen h-[100dvh] px-4 overflow-x-clip  relative text-white bg-[#0f0f0f] ">
 
 
             {/* big texts */}
@@ -37,7 +37,7 @@ export default function Contact(){
 
             {/* Links */}
             <div className=" absolute w-[300px] md:ml-[51px]  lg:right-[00px] z-10 top-[340px] md:top-[300px] text-left flex flex-col font-extralight gap-4">
-                <a href='https://www.linkedin.com/in/' target="_blank" 
+                <a href='https://www.linkedin.com/company/tech-hunterssss/posts/?feedView=all' target="_blank" 
                     className=" group relative w-fit flex gap-2 items-baseline flex-row h-fit overflow-clip"
                     >
                     <svg className=" group-hover:rotate-[40deg] duration-500 relative" width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -49,7 +49,7 @@ export default function Contact(){
                     <span>Linkedin</span>
                 </a>
 
-                <a href="https://github.com" target="_blank" 
+                <a href="https://discord.com/invite/srp2CRZmwA" target="_blank" 
                         className=" group relative w-fit flex gap-2 items-baseline flex-row h-fit overflow-clip">
 
                     <svg className=" group-hover:rotate-[40deg] duration-500 relative" width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -57,11 +57,11 @@ export default function Contact(){
                             <path d="M9.64714 1.17975C9.6288 0.954586 9.35655 0.793016 9.03905 0.818874L3.86513 1.24026C3.54764 1.26612 3.30512 1.46961 3.32346 1.69478C3.3418 1.91994 3.61404 2.08152 3.93154 2.05566L8.53058 1.68109L8.79622 4.94268C8.81456 5.16785 9.08681 5.32942 9.4043 5.30356C9.7218 5.2777 9.96432 5.07421 9.94598 4.84904L9.64714 1.17975ZM1.42998 8.25518L9.50224 1.48175L8.64228 0.971393L0.570019 7.74482L1.42998 8.25518Z" fill="white"/>
                         </g>
                     </svg>
-                    <FaGithubSquare />
-                    <span>Github</span>
+                    <FaDiscord />
+                    <span>Discord</span>
                 </a>
 
-                <a className=" group relative w-fit flex gap-2 items-baseline flex-row h-fit overflow-clip"
+                <a href="https://twitter.com/Techhunterssss" className=" group relative w-fit flex gap-2 items-baseline flex-row h-fit overflow-clip"
                     >
                     <svg className=" group-hover:rotate-[40deg] duration-500 relative" width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g style={{mixBlendMode: 'difference'}}>
@@ -72,7 +72,7 @@ export default function Contact(){
                     <span>Twitter</span>
                 </a>
 
-                <a className=" group relative w-fit flex gap-2 items-baseline flex-row h-fit overflow-clip"
+                <a href="https://www.instagram.com/techhunterssss/" className=" group relative w-fit flex gap-2 items-baseline flex-row h-fit overflow-clip"
                     >
                     <svg className=" group-hover:rotate-[40deg] duration-500 relative" width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g style={{mixBlendMode: 'difference'}}>

@@ -20,22 +20,23 @@ export default function PastEvents() {
         gsap.set('.virtualEventsReveal', {
             opacity: 0,
             y: 100,
-            // scale: 0.5, 
         });
     
         // Animate in
         gsap.fromTo('.virtualEventsReveal',{
             opacity: 0,
             y: 100,
-            // scale: 0.5,
         }, {
             opacity: 1,
             y: 0,
-            // scale: 1,
             duration: 1,
             delay: 0.4,
             ease: 'power3.out',
-            stagger: 0.4
+            stagger: 0.4,
+            scrollTrigger: {
+                trigger: '.virtualEventsReveal',
+                start: 'top 80%',
+            },
         });
     }, []);
     

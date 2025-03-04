@@ -12,6 +12,7 @@ import LocomotiveScroll from "locomotive-scroll";
 import Lenis from "lenis";
 import Sponsors from "./Sponsors/page";
 import Contact from "./Contact/page";
+import PastEvents from "./Track/page";
 
 export default function App() {
 
@@ -34,6 +35,8 @@ export default function App() {
       <Home />
 
       <Gallery />
+
+      <PastEvents />
 
       <Sponsors />
 

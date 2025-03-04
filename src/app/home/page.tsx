@@ -27,25 +27,25 @@ export default function Home() {
         duration: 1.5, 
         ease: "expo.inOut",
         onComplete: () => { gsap.set(leftRect.current, {display: 'none'}) }
-      }, 1)
+      }, 0.4)
       .to(rightRect.current, { 
         x: '50vw', 
         duration: 1.5, 
         ease: 'expo.inOut',
         onComplete: () => { gsap.set(rightRect.current, {display: 'none'}) } 
-      }, 1) // Run at the same time as left rect
+      }, 0.4) // Run at the same time as left rect
       
       // Image animation
       .fromTo(homeImageRef.current, 
         {scale: 1.27, opacity: 1}, 
         {scale: 1, opacity: 1, duration: 1.5, ease: 'expo.out'}, 
-        1) // Start at the same time as rectangles
+        0.4) // Start at the same time as rectangles
       
       // Heading animation
       .fromTo(huntersHeading.current,
         {y: 50, opacity: 0},
         {y: 0, opacity: 1, duration: 1.5, ease: 'power4.out'},
-        0.4) // Start after image starts scaling
+        2.4) // Start after image starts scaling
         
       // Button animation  
       .fromTo(LandingButton.current,
@@ -71,9 +71,6 @@ export default function Home() {
           priority 
           src={homeImage} 
           alt="homeImage" 
-          // width={1920} 
-          // height={1080}
-          // quality={85} // Reduce quality slightly for faster loading
           placeholder="blur" // Add a blur placeholder
           // blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
           className="w-[100vw] h-[60vh] md:h-[90vh] object-cover"
@@ -94,18 +91,18 @@ export default function Home() {
       {/* TechHunterss heading */}
       <span 
         ref={huntersHeading} 
-        className="uppercase z-50 homeHeading leading-[50px]  md:leading-[70px]  max-w-[90vw] text-[30px] sm:text-[60px] md:text-[80px] lg:text-[100px] font-black mt-[62vh] lg:mt-14"
+        className="uppercase homeHeading leading-[50px]  md:leading-[70px]  max-w-[90vw] text-[30px] sm:text-[60px] md:text-[80px] lg:text-[100px] font-black mt-[62vh] lg:mt-14"
       >
         Tech~hunterssss
       </span>
       
-      <p className="homePara relative mx-auto text-justify block text-[12px] md:hidden  mt-6 px-[50px]  max-w-[400px] font-bold text-gray-500">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ad fugit dicta. Ex numq
-      </p>
+      <pre className="homePara z-50 up relative mx-auto text-justify block text-[12px] md:text-[20px] font-normal md:font-light md:text-gray-50 mt-2 md:mt-12 px-[50px]  max-w-[400px] text-gray-500">
+        " together, we hold the power <br/>to build the world we envision "
+      </pre>
 
       <button 
         ref={LandingButton} 
-        className="uppercase py-1 px-3 mt-8 md:mt-14 opacity-0  text-slate-50 bg-white bg-opacity-30 backdrop-blur-md border-white border rounded-sm md:rounded-[4px] md:px-10 md:py-3 font-light"
+        className="uppercase py-2 px-6 mt-14  opacity-0 text-[12px] sm:text-[16px] text-slate-50 bg-white bg-opacity-30 backdrop-blur-md border-white border rounded-lg md:rounded-[14px]  font-light"
       >
         Join US 
       </button>
@@ -116,7 +113,7 @@ export default function Home() {
         <span></span>
         <span></span>
       </div> */}
-      <div className="mouse m-2 -translate-y-8 md:translate-y-28 scroll-down-animation opacity-0 "></div>
+      <div className="mouse m-2 -translate-y-6 md:translate-y-28 scroll-down-animation opacity-0 "></div>
 
 
       {/* Lazy load the asset animation when needed */}
