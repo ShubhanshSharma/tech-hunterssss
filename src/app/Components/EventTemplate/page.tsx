@@ -1,3 +1,4 @@
+"use client";
 // components/EventTemplate.tsx
 import React from "react";
 

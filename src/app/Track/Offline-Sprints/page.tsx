@@ -1,6 +1,6 @@
 "use client";
 
-import EventTemplate from "@/app/Components/Event Template/page";
+import EventTemplate from "@/app/Components/EventTemplate/page";
 import Image from "next/image";
 
 
