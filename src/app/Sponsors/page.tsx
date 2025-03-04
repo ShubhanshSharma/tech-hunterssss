@@ -47,7 +47,7 @@ export default function Sponsors() {
             stagger: 0.1,
             scrollTrigger:{
               trigger: '.sponsorsHeading',
-              start: 'top 60%',
+              start: 'top 45%',
               // toggleActions: 'play none none reset',
               // markers: true,
               
