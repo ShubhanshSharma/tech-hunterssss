@@ -34,7 +34,7 @@ export default function Sponsors() {
               // markers: true,
               
             }
-          })
+          });
 
           gsap.fromTo('.sponsorImage' ,{
             opacity: 0,
@@ -52,7 +52,7 @@ export default function Sponsors() {
               // markers: true,
               
             }
-          })
+          });
     }, [])
 
   return (
