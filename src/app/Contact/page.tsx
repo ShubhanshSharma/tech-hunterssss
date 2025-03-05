@@ -19,8 +19,8 @@ export default function Contact(){
 
             {/* big texts */}
             <div className=" relative flex flex-col  w-fit text-left md:ml-[35px] pt-[70px]">
-                <p className=" relative opacity-60 text-justify sm:text-[30px] sm:w-[50%] md:w-full lg:text-[50px]">Interested in working with Us?</p>
-                <p className=" relative text-[30px] md:text-[50px] md:leading-[58px] mt-[25px]">Together, we hold the power to build the world we envision</p>
+                <p className=" relative opacity-60 text-justify sm:text-[30px]  md:w-full lg:text-[50px]">Interested in working with Us?</p>
+                <p className=" relative text-[30px] lg:text-[50px] md:max-w-[80%] md:leading-[58px] mt-[25px]">Together, we hold the power to build the world we envision</p>
                 
                 <p className="-text-semibold  relative opacity-70 font-light mt-[40vh] lg:mt-[160px]">send a message</p>
                 
